@@ -1,0 +1,27 @@
+<ion-header>  
+  <ion-toolbar color="secondary">
+      <ion-title>AR Tech Consultancy</ion-title>
+  </ion-toolbar>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-item *ngFor="let item of contact">
+<h2>Contact Id: {{item.contact_id}}</h2>
+<p>Display Name: {{item.display_name}}</p>
+<p>Contact Type: : {{item.contact_type}}</p>
+</ion-item>
+</ion-content>
+
+<ion-footer>
+<ion-toolbar>    
+  <div class="alignCenter">Powered by AR TECH CONSULTANCY</div>
+  <div class="alignCenter">info@artechconsultancy.co.uk</div>    
+</ion-toolbar>
+</ion-footer>

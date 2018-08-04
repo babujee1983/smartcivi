@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+      <ion-title>AR Tech Consultancy</ion-title>
+  </ion-toolbar>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  > 
+  <form [formGroup]="reg" (ngSubmit)="register()" *ngIf="showCom">
+    <ion-list>
+      <ion-item>
+        <ion-label floating class="labelColor">Site URL </ion-label>
+        <ion-input type="text" formControlName="siteUrl" class="textboxColor"></ion-input>
+      </ion-item>  
+      <ion-item>
+        <ion-label floating class="labelColor">Site Key</ion-label>
+        <ion-input type="text" formControlName="siteKey" class="textboxColor"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating class="labelColor">API Key</ion-label>
+        <ion-input type="text" formControlName="apiKey" class="textboxColor"></ion-input>
+      </ion-item>  
+    </ion-list>    
+    <div block class="buttonAlign">
+      <button ion-button [disabled]="!reg.valid" >Register</button> 
+    </div> 
+    
+  </form>  
+  <div *ngIf="!showCom">
+    <div class="labelColor"> Welcome to Civi CRM</div >  
+    <br/>  
+    <div class="infoColor">You're connected to {{service.siteUrl}}</div>
+    <br/>    
+  </div>    
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- <ion-title color="calm">Powered by AR TECH CONSULTANCY</ion-title> -->
+    <div class="alignCenter" color="light">Powered by AR TECH CONSULTANCY</div>
+    <div class="alignCenter">info@artechconsultancy.co.uk</div>
+  </ion-toolbar>
+</ion-footer>

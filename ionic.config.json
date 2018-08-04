@@ -1,0 +1,14 @@
+{
+  "name": "SmartCivi",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://www.artechconsultancy.co.uk/sites/all/modules/civicrm/extern/rest.php"
+    }
+  ]
+}
